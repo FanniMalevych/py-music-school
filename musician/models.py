@@ -11,7 +11,7 @@ class Musician(models.Model):
 
     @property
     def is_adult(self):
-        return self.age > 21
+        return self.age >= 21
 
     def clean(self):
         if self.age < 14:
